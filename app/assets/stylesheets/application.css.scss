@@ -16,7 +16,8 @@
  
  @import 'bootstrap-sprockets';
  @import 'bootstrap';
- 
+ @import 'font-awesome-sprockets';
+ @import 'font-awesome';
  
 // topography styles
 h1, h2, h3, h4 {
@@ -28,12 +29,11 @@ h1 {
 }
 
 // background gradient
+
 .navbar, .home-callout {
-  background: #093028;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #237A57, #093028);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #237A57, #093028); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  opacity: 0.7;
-  
+  background: #73C8A9;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #373B34, #73C8A9);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #373B34, #73C8A9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 // nav styles
@@ -47,27 +47,27 @@ h1 {
 }
 
 .navbar-default .navbar-brand, .navbar-default .navbar-nav > li > a {
-  color: white;
+  color: #ff0000;
   &:hover {
-    color: #3faa6d;
-    opacity: 0.75;
+    color: #ffff00;
   }
 }
 
 .navbar-default .navbar-toggle .icon-bar {
-  background-color: #3faa6d;
+  background-color: #ff0000;
 }
 
 .navbar-default .navbar-toggle {
-  border: 5px solid light-gray;
+  border: 5px solid #73C8A9;
   &:hover, &:focus {
-    background-color: #24824c;
+    // background-color: #73C8A9;
+    opacity: 0.75;
   }
 }
 
 // home page styles
 .home-callout {
-  color: white;
+  color: #FFFF00;
   margin-top: -20px;
   padding-top: 20px;
   padding-bottom: 60px;
@@ -80,7 +80,7 @@ h1 {
   opacity: 0.5;
 }
 
-.alert-notice, altert-alert {
+.alert-notice, alert-alert {
   text-align: center;
   background: rgba(255, 255, 255, 0.3);
   border-color:  rgba(255, 255, 255, 0.5);
