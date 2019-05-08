@@ -13,12 +13,14 @@ def create
   
 # save contact object to database
   if @contact.save
+    flash[:success] = "Message sent."
     # show message and redirect to new action
-    redirect_to new_contact_path, notice: "Message sent."
+    redirect_to new_contact_path
   else
+    flash[:error] = @contact.errors.full_messages.join(",")
     # if contact object no save:
     # show message and redirect to new action/form page
-    redirect_to new_contact_path, notice: "Error occurred."
+    redirect_to new_contact_path
   end
 end
 
