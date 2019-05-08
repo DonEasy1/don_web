@@ -17,7 +17,7 @@ def create
     # show message and redirect to new action
     redirect_to new_contact_path
   else
-    flash[:error] = @contact.errors.full_messages.join(",")
+    flash[:danger] = @contact.errors.full_messages.join(",")
     # if contact object no save:
     # show message and redirect to new action/form page
     redirect_to new_contact_path
