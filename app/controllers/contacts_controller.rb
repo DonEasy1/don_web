@@ -10,9 +10,11 @@ class ContactsController < ApplicationController
 def create
   # mass assignment of form fields into Contact object
   @contact = Contact.new(contact_params)
-  
-# save contact object to database
   if @contact.save
+    name = params[:contact][:name]
+    email = params[:contact][:email]
+    body = params[:contact][:comments]
+    ContactMailer.contact_email(name, email, body).deliver
     flash[:success] = "Message sent."
     # show message and redirect to new action
     redirect_to new_contact_path
