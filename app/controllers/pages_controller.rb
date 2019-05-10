@@ -7,6 +7,12 @@ class PagesController < ApplicationController
   
   def connect
   end
+  
+    def consult
+  end
+  
+    def contract
+  end
 end
 
         
