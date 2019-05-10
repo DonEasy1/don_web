@@ -4,14 +4,17 @@ class PagesController < ApplicationController
   
   def about
   end
+
+  def blog
+  end
   
   def connect
   end
   
-    def consult
+  def consult
   end
   
-    def contract
+  def contract
   end
 end
 
