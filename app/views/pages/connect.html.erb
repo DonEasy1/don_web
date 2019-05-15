@@ -1,21 +1,21 @@
 <div class="home-callout text-center container-fluid">
   <h1>Welcome to this network</h1>
-  <h3>where valuable connections can be made.</h3>
+  <h3>where valuable connections are made</h3>
 </div>
-<div class="container home-signup-links">
+<div class="container home-signup-links text-center">
   <div class="row">
     <div class="col-md-6">
       <div class="well">
-        <h2 class="text-center">Basic membership</h2>
+        <h2>Basic membership</h2>
         <br/>
         <h4>Sign up for free and get basic access to the network.</h4>
         <br/>
         <%= link_to "Sign up for Basic", new_user_registration_path(plan: @basic_plan.id), class: "btn btn-primary btn-lg btn-block" %>
       </div>
     </div>
-    <div class="col-md-6 text-center">
+    <div class="col-md-6">
       <div class="well">
-        <h2 class="text-center">Pro Membership</h2>
+        <h2>Pro Membership</h2>
         <br/>
         <h4>Sign up for a Pro account: $50. Get access to the network and contact information.</h4>
         <%= link_to "Sign up with Pro", new_user_registration_path(plan: @pro_plan.id), class: 'btn btn-success btn-lg btn-block' %>

@@ -24,17 +24,19 @@ h1, h2, h3, h4 {
   font-family: 'Open Sans', sans-serif;
 }
 
-h1 {
-  margin: 1em 0 1em 0;
+h1, h3{
+  margin-top: 2em;
 }
 
 // background gradient
 
-.navbar, .home-callout {
+.navbar.navbar-default.navbar-fixed-top {
+  background: #153b2b;
+}
+.home-callout {
   background: #73C8A9;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #101613, #73C8A9);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #101613, #73C8A9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  opacity: 0.85;
+  background: -webkit-linear-gradient(to right, #28473a, #71a691);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #28473a, #71a691); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 // nav styles
@@ -69,8 +71,8 @@ h1 {
 // home page styles
 .home-callout {
   color: #FFFF00;
-  margin-top: -20px;
-  padding-top: 20px;
+  // margin-top: -20em;
+  padding-top: 5em;
   padding-bottom: 60px;
 }
 
