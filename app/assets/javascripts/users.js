@@ -1,4 +1,4 @@
-/* global $, Stripe */
+/* global $, Stripe, stripeResponseHandler */
 //Use rails version of document ready function.
   $(document).on('turbolinks:load', function(){
   var theForm = $('#pro_form');
