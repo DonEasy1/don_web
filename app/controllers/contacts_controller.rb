@@ -12,7 +12,7 @@ def create
   @contact = Contact.new(contact_params)
   # request to poste to database
   if @contact.save
-  # store forme fields via parameters into variables
+  # store form fields via parameters into variables
     name = params[:contact][:name]
     email = params[:contact][:email]
     body = params[:contact][:comments]
