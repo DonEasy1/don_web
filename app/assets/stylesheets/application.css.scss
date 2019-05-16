@@ -36,6 +36,7 @@ h1, h3{
   background: #73C8A9;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #28473a, #71a691);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #28473a, #71a691); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  opacity: 0.75;
 }
 
 // nav styles
@@ -68,8 +69,8 @@ h1, h3{
   }
 }
 
-// home page styles
-.home-callout {
+// home and connect page styles
+.callout {
   color: #FFFF00;
   margin-top: 1em;
   padding-top: 3em;
@@ -79,7 +80,7 @@ h1, h3{
 .flash-container {
   position: relative;
   width: 100%;
-  // opacity: 0.5;
+  opacity: 0.75;
 }
 
 .alert-notice {
@@ -94,6 +95,6 @@ h1, h3{
   margin-bottom: -.15em;
 }
 
-.home-signup-links {
+.connect-signup-links {
   margin-top: 1.5em;
 }
