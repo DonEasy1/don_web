@@ -72,9 +72,9 @@ h1, h3{
 // home and connect page styles
 .callout {
   color: #FFFF00;
-  margin-top: 1em;
+  margin-top: .5em;
   padding-top: 3em;
-  padding-bottom: 3.5em;
+  padding-bottom: 3em;
 }
 
 .flash-container {
@@ -89,12 +89,14 @@ h1, h3{
 
 .alert-notice, .alert, .alert-alert {
   text-align: center;
-  background: #e3ffff;
+  background: #d1ebce;
   border-color:  #f7ffff;
   margin-top: 3.75em;
   margin-bottom: -.15em;
+  // opacity: 0.50;
 }
 
 .connect-signup-links {
   margin-top: 1.5em;
+  margin-bottom: 1.5em;
 }
