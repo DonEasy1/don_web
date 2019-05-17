@@ -22,4 +22,6 @@
       </div>
     </div>
   </div>
+  <!--devise allows us to find and verify logged-in user and id. Show this link only if (keeps page from breaking -->
+  <%= link_to "Create Your Profile", new_user_profile_path(current_user.id) if user_signed_in? %>
 </div>
