@@ -36,7 +36,7 @@ h1, h3{
   background: #73C8A9;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #28473a, #71a691);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #28473a, #71a691); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  opacity: 0.75;
+  opacity: 0.85;
 }
 
 // nav styles
@@ -65,7 +65,7 @@ h1, h3{
   border: 1px solid #73C8A9;
   &:hover, &:focus {
     background-color: #7196a1;
-    opacity: 0.75;
+    opacity: 0.85;
   }
 }
 
@@ -80,7 +80,7 @@ h1, h3{
 .flash-container {
   position: relative;
   width: 100%;
-  opacity: 0.75;
+  opacity: 0.85;
 }
 
 .alert-notice {
@@ -93,7 +93,6 @@ h1, h3{
   border-color:  #f7ffff;
   margin-top: 3.75em;
   margin-bottom: -.15em;
-  // opacity: 0.50;
 }
 
 .connect-signup-links {
