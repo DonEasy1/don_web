@@ -13,8 +13,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
         else
           resource.save
         end
-        redirect_to connect_path(plan: resource.plan_id)
-        return
       end
     end
   end
@@ -22,7 +20,9 @@ class Users::RegistrationsController < Devise::RegistrationsController
   private
     def select_plan
       unless (params[:plan] == '1' || params[:plan] == '2')
-      flash[:notice] = "Please select a membership plan to sign up."
+      flash[:notice] = "Please sign up for one of the membership connect plans."
+      redirect_to connect_path(params[:user_id])
+        # return
       end
     end
 end
