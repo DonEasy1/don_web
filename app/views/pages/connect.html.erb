@@ -3,25 +3,42 @@
   <h3>and make valuable industry connections!</h3>
 </div>
 <div class="container connect-signup-links text-center">
-  <div class="row">
-    <div class="col-md-6">
-      <div class="well">
-        <h2>Basic membership</h2>
-        <br/>
-        <h4>Sign up for free and get basic access to the network.</h4>
-        <br/>
-        <%= link_to "Sign up for Basic", new_user_registration_path(plan: @basic_plan.id), class: "btn btn-primary btn-lg btn-block" %>
+  <% if user_signed_in? %>
+      <div class="col-md-6">
+        <div class="well">
+          <h2 class="text-center">Your Account</h2>
+          <% if current_user.profile %>
+            <%= link_to "Edit your profile", edit_user_profile_path(user_id: current_user.id), class: 'btn btn-default btn-lg btn-block' %>
+            <%= link_to "View your profile", user_path(id: current_user.id), class: 'btn btn-default btn-lg btn-block' %>
+          <% else %>
+          <p>Create your profile, so you can share your information with the network.</p>
+            <%= link_to "Create your profile", new_user_profile_path(user_id: current_user.id), class: 'btn btn-default btn-lg btn-block' %>
+          <% end %>
+        </div>
       </div>
-    </div>
-    <div class="col-md-6">
-      <div class="well">
-        <h2>Pro Membership</h2>
-        <br/>
-        <h4>Sign up for a Pro account: $50. Get access to the network, contact info & details.</h4>
-        <%= link_to "Sign up with Pro", new_user_registration_path(plan: @pro_plan.id), class: 'btn btn-success btn-lg btn-block' %>
+      <div class="col-md-6">
+        <div class="well">
+          <h2 class "text-center">Industry Network</h2>
+          <p>Connect and share your information.</p>
+          <%= link_to "Visit the community", users_path, class: 'btn btn-default btn-lg btn-block' %>
+        </div>
       </div>
-    </div>
+    <% else %>
+      <div class="col-md-6">
+        <div class="well">
+          <h2 class="text-center">Basic Membership</h2>
+          <h4>Sign up for free and get basic access to the community.</h4>
+          <br/>
+          <%= link_to "Sign up with Basic", new_user_registration_path(plan: @basic_plan.id), class: 'btn btn-primary btn-lg btn-block' %>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="well">
+          <h2 class="text-center">Pro Membership</h2>
+          <h4>Sign up for a Pro account for $10/month and get access to the community and contact information!</h4>
+          <%= link_to "Sign up with Pro", new_user_registration_path(plan: @pro_plan.id), class: 'btn btn-success btn-lg btn-block' %>
+        </div>
+      </div>
+    <% end %>
   </div>
-  <!--devise allows us to find and verify logged-in user and id. Show this link only if (keeps page from breaking -->
-  <%= link_to "Create Your Profile", new_user_profile_path(user_id: current_user.id) if user_signed_in? %>
 </div>
