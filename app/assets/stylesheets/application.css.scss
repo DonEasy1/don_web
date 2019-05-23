@@ -28,7 +28,13 @@ h1, h3{
   margin-top: 1em;
 }
 
-// background gradient
+// home, connect & support page styling
+.callout, .support-tops {
+  margin-top: .5em;
+  padding-top: 3em;
+  padding-bottom: 3em;
+}
+
 .navbar.navbar-default.navbar-fixed-top {
   background: #153b2b;
 }
@@ -37,6 +43,7 @@ h1, h3{
   background: -webkit-linear-gradient(to right, #28473a, #71a691);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #28473a, #71a691); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   opacity: 0.85;
+  color: #FFFF00;
 }
 
 // nav styles
@@ -69,22 +76,10 @@ h1, h3{
   }
 }
 
-// home and connect page styles
-.callout {
-  color: #FFFF00;
-  margin-top: .5em;
-  padding-top: 3em;
-  padding-bottom: 3em;
-}
-
 .flash-container {
   position: relative;
   width: 100%;
   opacity: 0.85;
-}
-
-.alert-notice {
-  // display: none;
 }
 
 .alert-notice, .alert, .alert-alert {
