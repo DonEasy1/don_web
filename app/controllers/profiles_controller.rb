@@ -1,4 +1,9 @@
 class ProfilesController < ApplicationController
+  # Protect profile pages. Devise handles first before action
+  before_action :authenticate_user!
+  # this user variable defined in private section below.
+  before_action :only_current_user!
+  
   # GET to /users/:user_id/profile/new
   def new
     @profile = Profile.new
@@ -41,8 +46,13 @@ class ProfilesController < ApplicationController
   end
   
   private
-  private
-  def profile_params
-    params.require(:profile).permit(:first_name, :last_name, :avatar, :job_title, :current_member_union, :role, :phone_number, :contact_email, :description)
-  end
+    def profile_params
+      params.require(:profile).permit(:first_name, :last_name, :avatar, :job_title, :current_member_union, :role, :phone_number, :contact_email, :description)
+    end
+    
+    def only_current_user!
+      @user = User.find(params[:user_id])
+      #unless user id in url matches devise check for current user, redirect to root
+      redirect_to connect_path unless @user == current_user
+    end
 end
