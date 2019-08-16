@@ -25,7 +25,7 @@ gem 'jbuilder', '2.5.0'
 # gem 'capistrano-rails', group: :development
 
 # Use twitter bootstrap for front ent ui & layout
-gem 'bootstrap-sass', '3.3.7'
+gem 'bootstrap-sass', '3.4.1'
 
 # Use Font Awesome sass adding icons
 gem 'font-awesome-sass', '4.6.2'
@@ -34,7 +34,7 @@ gem 'font-awesome-sass', '4.6.2'
 gem 'hirb', '0.7.3'
 
 # Use Devise for user authentication
-gem 'devise', '4.2.0'
+gem 'devise', '4.6.0'
 
 # Use Stripe for payment proessing
 gem 'stripe', '1.48.0'
@@ -43,7 +43,7 @@ gem 'stripe', '1.48.0'
 gem 'figaro', '1.1.1'
 
 # Use Paperclip for image upload
-gem 'paperclip', '4.3.6'
+gem 'paperclip', '5.2.0'
 
 group :development, :test do
   # Use sqlite3 as the database for Active Record
